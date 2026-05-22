@@ -3,7 +3,7 @@
 A Python data pipeline that fetches real YouTube comments and analyzes sentiment across music artist fanbases.
 
 ## What it does
-- Fetches ~500 YouTube comments per artist using YouTube Data API v3
+- Fetches ~100 YouTube comments per artist using YouTube Data API v3
 - Runs sentiment analysis using VADER (optimized for social media language)
 - Aggregates results per artist — avg sentiment, positive/negative/neutral breakdown
 - Saves full results as Parquet
