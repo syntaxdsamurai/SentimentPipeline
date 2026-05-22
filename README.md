@@ -1,7 +1,4 @@
-Here's your README:
-
-```markdown
-# Fanbase Sentiment Analyzer 🎵
+# Sentiment Analyzer 
 
 A Python data pipeline that fetches real YouTube comments and analyzes sentiment across music artist fanbases.
 
@@ -12,6 +9,7 @@ A Python data pipeline that fetches real YouTube comments and analyzes sentiment
 - Saves full results as Parquet
 
 ## Results
+
 | Artist | Avg Sentiment | Positive | Negative | Neutral |
 |--------|--------------|----------|----------|---------|
 | Laufey | 0.271 | 253 | 71 | 156 |
@@ -22,13 +20,12 @@ A Python data pipeline that fetches real YouTube comments and analyzes sentiment
 **Key insight:** Mitski fans show significantly higher negative sentiment — likely reflecting the emotional weight of her music attracting a more melancholic audience.
 
 ## Project Structure
-```
-├── extractor.py       # YouTube API calls, comment fetching
-├── processor.py       # VADER sentiment scoring + Parquet save
-├── main.py            # Pipeline orchestration + summary
-├── .env               # API keys (not committed)
-└── requirements.txt   # Dependencies
-```
+
+    ├── extractor.py       # YouTube API calls, comment fetching
+    ├── processor.py       # VADER sentiment scoring + Parquet save
+    ├── main.py            # Pipeline orchestration + summary
+    ├── .env               # API keys (not committed)
+    └── requirements.txt   # Dependencies
 
 ## Tech Stack
 - Python 3.14
@@ -39,24 +36,13 @@ A Python data pipeline that fetches real YouTube comments and analyzes sentiment
 - python-dotenv
 
 ## Setup
+
 1. Clone the repo
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-3. Create `.env` file:
-```
-YOUTUBE_API_KEY=your_key_here
-```
-4. Run:
-```bash
-python main.py
-```
+2. Install dependencies: `pip install -r requirements.txt`
+3. Create `.env` file and add: `YOUTUBE_API_KEY=your_key_here`
+4. Run: `python main.py`
 
 ## Limitations
-- VADER struggles with non-English comments (Hinglish, Korean etc.)
+- VADER struggles with non-English comments (Spanish, Korean etc.)
 - YouTube API quota limits daily comment fetching
 - Short comments like emojis often score as neutral
-```
-
-Save this as `README.md` in your project root, then commit and push.
